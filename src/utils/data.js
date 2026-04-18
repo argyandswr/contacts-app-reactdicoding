@@ -1,27 +1,39 @@
-const getData = () => {
-  return [
-    {
-      id: 1, 
-      name: 'Dimas Mentai', 
-      tag: 'dmsmentai', 
-      imageUrl: '/public/images/minumBang.jpeg',
-    }, 
+let contacts = [
+  {
+    id: 1,
+    name: 'Dimas Mentai',
+    tag: 'dmsmentai',
+    imageUrl: '/public/images/minumBang.jpeg',
+  },
 
-    {
-      id: 2, 
-      name: 'Udin Geming221', 
-      tag: 'utheengaming55',
-      imageUrl: '/public/images/kucingGeming.jpeg'
-    },
-    
-    {
-      id: 3, 
-      name: 'Moel Yoe Know', 
-      tag: 'myk33',
-      imageUrl: '/public/images/chill.jpeg'
-    },
-    
-  ]
+  {
+    id: 2,
+    name: 'Udin Geming221',
+    tag: 'utheengaming55',
+    imageUrl: '/public/images/kucingGeming.jpeg',
+  },
+
+  {
+    id: 3,
+    name: 'Moel Yoe Know',
+    tag: 'myk33',
+    imageUrl: '/public/images/chill.jpeg',
+  },
+];
+
+function getContacts() {
+  return contacts;
 }
 
-export { getData }; 
+function addContact(contact) {
+  contacts = [
+    ...contacts,
+    { id: +new Date(), imageUrl: '/public/images/default.jpg', ...contact },
+  ];
+}
+
+function deleteContact(id) {
+  contacts = contacts.filter((contact) => contact.id !== id);
+}
+
+export { getContacts, addContact, deleteContact };

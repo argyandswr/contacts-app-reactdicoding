@@ -10,7 +10,7 @@ class ContactInput extends React.Component {
   constructor(props) {
     super(props);
 
-    const validatedProps = validateProps(
+    const validatedProps = validateProps (
       contactInputPropsSchema,
       props,
       'ContactInput',
@@ -45,7 +45,7 @@ class ContactInput extends React.Component {
 
   onSubmitEventHandler(event) {
     event.preventDefault();
-    const { addContact } = this.state.validateProps;
+    const { addContact } = this.state.validatedProps;
     addContact(this.state);
     // this.setState({ name: '', tag: '' });
   }
