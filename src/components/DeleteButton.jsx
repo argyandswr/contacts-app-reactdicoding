@@ -4,7 +4,7 @@ import { validateProps } from '../utils/validation';
 import { FiDelete } from 'react-icons/fi';
 
 const deleteButtonPropsSchema = Joi.object({
-  id: Joi.number().required(),
+  id: Joi.string().required(),
   onDelete: Joi.func().required(),
 });
 
@@ -22,5 +22,6 @@ function DeleteButton(props) {
     </button>
   );
 }
+
 
 export default DeleteButton;

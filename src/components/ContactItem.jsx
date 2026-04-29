@@ -7,7 +7,7 @@ import { validateProps } from '../utils/validation';
 
 const contactItemPropsSchema = Joi.object({
   imageUrl: Joi.string().required(),
-  name: Joi.string().required(),
+  name: Joi.string().required(),  
   tag: Joi.string().required(), 
   id: Joi.number().required(), 
   onDelete: Joi.func().required(),

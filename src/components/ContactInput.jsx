@@ -3,7 +3,7 @@ import Joi from 'joi';
 import { validateProps } from '../utils/validation';
 
 const contactInputPropsSchema = Joi.object({
-  addContact: Joi.func().required(),
+  addContact: Joi.func().required(),  
 });
 
 class ContactInput extends React.Component {
